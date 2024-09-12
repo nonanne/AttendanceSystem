@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard - Attendance Monitor System</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>Attendance Monitor System</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">dashboard</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Attendance Log Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Module</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Data -->
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Module A</td>
+                    <td>2023-01-01 09:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Module B</td>
+                    <td>***********</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <p class="notes">This page is for showing attendance record (Only Admin can see).</p>
+    </main>
+</body>
+</html>
