@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"os"
 
-	"gnark/signature/eddsa"
+	"PROJECT/gnark/signature/eddsa"
 
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
@@ -144,9 +144,9 @@ func main() {
 	publicWitness, _ := witness.Public()
 
 	// groth16: Prove & Verify
-	proof, _ := groth16.Prove(ccs, pk, witness)
+	proof, _ := groth16.Prove(ccs, pk, witness) // prof can give to someone, submit the proof to verifier
 	groth16.Verify(proof, vk, publicWitness)
 
-	printEthProofs(vk, proof, publicWitness)
+	printEthProofs(vk, proof, publicWitness) // print number 0 knowledge proof
 
 }
