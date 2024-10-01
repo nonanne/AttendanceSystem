@@ -21,16 +21,35 @@
     </header>
     <main>
         <div class="form-container">
-            <form action="/submit-password" method="POST">
+            <h2 id="selected-module">Selected Module: </h2>
+            <!-- input password form -->
+            <form action="/submit-attendanceData" method="POST">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <input type="hidden" id="module" name="module">
                 <div class="buttons">
                     <button type="submit">OK</button>
                     <button type="button" onclick="window.history.back()">Cancel</button>
                 </div>
             </form>
         </div>
-        <p class="notes">This page is for choosing module which user attend.</p>
+        <p class="notes">This page is for inputting a password as an attendance data.</p>
     </main>
+
+    <script>
+        // get module number from URL
+        function getModuleFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('module');
+        }
+
+        const selectedModule = getModuleFromUrl();
+        if (selectedModule) {
+            document.getElementById('selected-module').textContent = `Selected Module: ${selectedModule}`;
+            document.getElementById('module').value = selectedModule; // set module number to hidden input
+        } else {
+            document.getElementById('selected-module').textContent = 'No Module Selected';
+        }
+    </script>
 </body>
 </html>
