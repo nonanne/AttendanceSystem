@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+header .brand h1 {
+    margin: 0;
+    color: #007BFF;
+}
+
+header .navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header .navigation ul li {
+    margin-left: 30px;
+}
+
+header .navigation ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.notes {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-left: 3px solid #007BFF;
+    color: #333;
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+}
+
+.module {
+    width: 200px;  
+    height: 50px;  
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;  
+    text-transform: uppercase;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+table {
+    width: 80%; /* Adjust based on layout */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border */
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #007BFF; /* Blue header */
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Zebra stripes */
+}
